@@ -102,7 +102,7 @@ blockquote p {
   cursor: pointer;
 }
 
-.CV:hover{
+.CV:hover, a:hover{
   color: rgba(128, 128, 128, 0.733);
 }
 
@@ -137,4 +137,11 @@ body::-webkit-scrollbar-track{
 body::-webkit-scrollbar-thumb{
   background: hsl(200, 100%, 63%);
   border-radius: 50%;
+}
+
+@media all and (max-width: 768px){
+  section, header, blockquote, .left{
+    grid-column: 2 / span 11;
+    justify-content: center;
+  }
 }
