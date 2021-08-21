@@ -111,8 +111,6 @@ function moveCamera(){
   const t = document.body.getBoundingClientRect().top;
 
   moon.rotation.x += 0.05;
-  moon.rotation.y += 0.075;
-  moon.rotation.z += 0.05;
   
   moon2.rotation.z += 0.05;
 

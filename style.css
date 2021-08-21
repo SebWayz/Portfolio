@@ -29,7 +29,7 @@ main {
   grid-template-columns: repeat(12, 1fr);
 }
 
-h1, h2, h3, blockquote {
+h1, h2, h3, blockquote, button {
   font-family: elevon, sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -58,11 +58,30 @@ section {
   margin-bottom: var(--spacing);
 }
 
+section p{
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.project-link{
+  text-align: right;
+  text-decoration: none;
+}
+
+a{
+  text-decoration: none;
+  color: hsl(258, 89%, 60%);
+}
+
+section img{
+  width: 100%;
+}
+
 blockquote {
   margin: 0;
   padding: 0;
   grid-column: 2 / span 10;
-  margin-bottom: var(--spacing);
+  margin-bottom: 450px;
 }
 
 blockquote p {
@@ -71,6 +90,30 @@ blockquote p {
   font-size: 4rem;
   display: inline;
   line-height: 1.5;
+}
+
+.CV{
+  border: 2px solid hsl(258, 89%, 60%);
+  background-color: var(--dark-bg);
+  color: white;
+  padding: 8px 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.feather-16 {
+  width: 16px;
+  height: 16px;
+}
+
+.feather-24 {
+  width: 24px;
+  height: 24px;
+}
+
+.feather-32 {
+  width: 32px;
+  height: 32px;
 }
 
 .left {
