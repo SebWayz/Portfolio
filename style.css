@@ -73,6 +73,7 @@ a{
   color: hsl(258, 89%, 60%);
 }
 
+
 section img{
   width: 100%;
 }
@@ -99,6 +100,10 @@ blockquote p {
   padding: 8px 15px;
   font-size: 16px;
   cursor: pointer;
+}
+
+.CV:hover{
+  color: rgba(128, 128, 128, 0.733);
 }
 
 .feather-16 {

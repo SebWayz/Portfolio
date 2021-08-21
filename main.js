@@ -19,6 +19,19 @@ camera.position.setX(-3);
 
 renderer.render(scene, camera);
 
+function onWindowResize() {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+
+  renderer.setSize( window.innerWidth, window.innerHeight );
+
+  render();
+}
+
+window.addEventListener('resize', () => {
+  onWindowResize();
+});
+
 const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
 const material = new THREE.MeshStandardMaterial( {color: 0xFF6347} );
 const torus = new THREE.Mesh(geometry, material);
@@ -98,7 +111,7 @@ moon.position.z = 30;
 moon.position.setX(-10);
 
 //Moon2's base position
-moon2.position.z = 39;
+moon2.position.z = 40;
 moon2.position.x = 10;
 
 //Cube's base position
