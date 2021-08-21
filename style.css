@@ -140,6 +140,14 @@ body::-webkit-scrollbar-thumb{
 }
 
 @media all and (max-width: 768px){
+  header h1{
+    font-size: 4rem;
+  }
+
+  blockquote{
+    grid-column: 1 / span 5;
+  }
+
   section, header, blockquote, .left{
     grid-column: 2 / span 11;
     justify-content: center;
