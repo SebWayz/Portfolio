@@ -1,7 +1,7 @@
 @import url("https://use.typekit.net/jmk3xov.css");
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 
-canvas{
+canvas {
   position: fixed;
   top: 0;
   left: 0;
@@ -24,12 +24,16 @@ main {
   width: 95%;
   margin: 0px auto;
   padding: 120px 0px;
-  
+
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
 
-h1, h2, h3, blockquote, button {
+h1,
+h2,
+h3,
+blockquote,
+button {
   font-family: elevon, sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -58,23 +62,22 @@ section {
   margin-bottom: var(--spacing);
 }
 
-section p{
+section p {
   text-align: justify;
   text-justify: inter-word;
 }
 
-.project-link{
+.project-link {
   text-align: right;
   text-decoration: none;
 }
 
-a{
+a {
   text-decoration: none;
   color: hsl(258, 89%, 60%);
 }
 
-
-section img{
+section img {
   width: 100%;
 }
 
@@ -88,13 +91,15 @@ blockquote {
 blockquote p {
   color: black;
   background-color: white;
+  border-radius: 20px;
   font-size: 4rem;
   display: inline;
   line-height: 1.5;
 }
 
-.CV{
+.CV {
   border: 2px solid hsl(258, 89%, 60%);
+  border-radius: 10px;
   background-color: var(--dark-bg);
   color: white;
   padding: 8px 15px;
@@ -102,7 +107,8 @@ blockquote p {
   cursor: pointer;
 }
 
-.CV:hover, a:hover{
+.CV:hover,
+a:hover {
   color: rgba(128, 128, 128, 0.733);
 }
 
@@ -125,31 +131,41 @@ blockquote p {
   grid-column: 6 / 12;
 }
 
+section,
+header,
+.left {
+  border-radius: 20px;
+}
+
 ::-webkit-scrollbar {
   width: 0.25rem;
   background-color: blue;
 }
 
-body::-webkit-scrollbar-track{
+body::-webkit-scrollbar-track {
   background: hsl(258, 89%, 60%);
 }
 
-body::-webkit-scrollbar-thumb{
+body::-webkit-scrollbar-thumb {
   background: hsl(200, 100%, 63%);
   border-radius: 50%;
 }
 
-@media all and (max-width: 768px){
-  header h1{
+@media all and (max-width: 768px) {
+  header h1 {
     font-size: 4rem;
   }
 
-  blockquote{
+  blockquote {
     grid-column: 1 / span 5;
   }
 
-  section, header, blockquote, .left{
+  section,
+  header,
+  blockquote,
+  .left {
     grid-column: 2 / span 11;
     justify-content: center;
+    border-radius: 20px;
   }
 }
