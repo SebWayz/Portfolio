@@ -33,7 +33,7 @@ window.addEventListener('resize', () => {
 });
 
 const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
-const material = new THREE.MeshStandardMaterial( {color: 0xFF6347} );
+const material = new THREE.MeshStandardMaterial( {color: 0x3388d4} );
 const torus = new THREE.Mesh(geometry, material);
 
 scene.add(torus);
@@ -123,7 +123,7 @@ seb.position.x = 2;
 function moveCamera(){
   const t = document.body.getBoundingClientRect().top;
 
-  moon.rotation.x += 0.05;
+  moon.rotation.x += 0.02;
   
   moon2.rotation.z += 0.05;
 
