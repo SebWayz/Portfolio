@@ -129,6 +129,7 @@ blockquote p {
   font-size: 4rem;
   display: inline;
   line-height: 1.5;
+  padding: 4px;
 }
 
 .CV {
@@ -145,6 +146,15 @@ blockquote p {
 .CV:hover,
 a:hover {
   color: rgba(128, 128, 128, 0.733);
+}
+
+.newTabIcon {
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+.newTabIcon:hover path{
+  fill: rgba(128, 128, 128, 0.733); 
 }
 
 .feather-16 {
