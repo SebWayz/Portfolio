@@ -16,6 +16,16 @@ canvas {
   font-style: normal;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 main {
   width: 100vw;
   color: white;
@@ -78,6 +88,10 @@ header {
   z-index: 1;
 }
 
+#scroll.hide {
+  display: none;
+}
+
 #scroll svg {
   width: 100%;
   height: 100%;
@@ -133,7 +147,7 @@ blockquote p {
 }
 
 .CV {
-  border: 2px solid hsl(258, 89%, 60%);
+  border: 4px solid hsl(258, 89%, 60%);
   border-radius: 10px;
   background-color: var(--dark-bg);
   color: white;
@@ -153,23 +167,33 @@ a:hover {
   vertical-align: middle;
 }
 
-.newTabIcon:hover path{
-  fill: rgba(128, 128, 128, 0.733); 
+.newTabIcon:hover path {
+  fill: rgba(128, 128, 128, 0.733);
 }
 
 .feather-16 {
   width: 16px;
   height: 16px;
+  display: inline-block;
+  vertical-align: -4px;
 }
 
 .feather-24 {
   width: 24px;
   height: 24px;
+  display: inline-block;
+  vertical-align: -6px;
 }
 
 .feather-32 {
   width: 32px;
   height: 32px;
+  display: inline-block;
+  vertical-align: -8px;
+}
+
+.center {
+  grid-column: 4 / 10;
 }
 
 .left {

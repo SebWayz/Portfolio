@@ -1,15 +1,20 @@
-import './style.css'
+import "./style.css";
 
-import * as THREE from 'three';
+import * as THREE from "three";
 
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 const scene = new THREE.Scene();
 
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+const camera = new THREE.PerspectiveCamera(
+  75,
+  window.innerWidth / window.innerHeight,
+  0.1,
+  1000,
+);
 
 const renderer = new THREE.WebGL1Renderer({
-  canvas: document.querySelector('#bg'),
+  canvas: document.querySelector("#bg"),
 });
 
 renderer.setPixelRatio(window.devicePixelRatio);
@@ -23,28 +28,28 @@ function onWindowResize() {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
 
-  renderer.setSize( window.innerWidth, window.innerHeight );
+  renderer.setSize(window.innerWidth, window.innerHeight);
 
   render();
 }
 
-window.addEventListener('resize', () => {
+window.addEventListener("resize", () => {
   onWindowResize();
 });
 
 const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
-const material = new THREE.MeshStandardMaterial( {color: 0x3388d4} );
+const material = new THREE.MeshStandardMaterial({ color: 0x3388d4 });
 const torus = new THREE.Mesh(geometry, material);
 
 scene.add(torus);
 
 //Lighting
 
-const pointLight = new THREE.PointLight(0xffffff)
-pointLight.position.set(5,5,5)
+const pointLight = new THREE.PointLight(0xffffff);
+pointLight.position.set(5, 5, 5);
 
-const ambientLight = new THREE.AmbientLight(0xffffff)
-scene.add(pointLight, ambientLight)
+const ambientLight = new THREE.AmbientLight(0xffffff);
+scene.add(pointLight, ambientLight);
 
 //Helpers
 
@@ -55,12 +60,14 @@ scene.add(lightHelper, gridHelper) */
 //const controls = new OrbitControls(camera, renderer.domElement);
 
 //Stars in the background
-function addStar(){
-  const geometry = new THREE.SphereGeometry(0.25, 24 ,24);
-  const material = new THREE.MeshStandardMaterial( { color: 0xffffff } );
+function addStar() {
+  const geometry = new THREE.SphereGeometry(0.25, 24, 24);
+  const material = new THREE.MeshStandardMaterial({ color: 0xffffff });
   const star = new THREE.Mesh(geometry, material);
 
-  const [x, y, z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(120));
+  const [x, y, z] = Array(3)
+    .fill()
+    .map(() => THREE.MathUtils.randFloatSpread(120));
 
   star.position.set(x, y, z);
   scene.add(star);
@@ -68,31 +75,31 @@ function addStar(){
 
 Array(200).fill().forEach(addStar);
 
-const backTexture = new THREE.TextureLoader().load('space.jpg');
+const backTexture = new THREE.TextureLoader().load("space.jpg");
 scene.background = backTexture;
 
 //Profile cube
 
-const sebTexture = new THREE.TextureLoader().load('logoSebway.jpg');
+const sebTexture = new THREE.TextureLoader().load("logoSebway.jpg");
 
 const seb = new THREE.Mesh(
-  new THREE.BoxGeometry(3,3,3),
-  new THREE.MeshBasicMaterial({ map: sebTexture })
+  new THREE.BoxGeometry(3, 3, 3),
+  new THREE.MeshBasicMaterial({ map: sebTexture }),
 );
 
 scene.add(seb);
 
 //Moon sphere
 
-const moonTexture = new THREE.TextureLoader().load('moon.jpg');
-const normalTexture = new THREE.TextureLoader().load('normal.jpg');
+const moonTexture = new THREE.TextureLoader().load("moon.jpg");
+const normalTexture = new THREE.TextureLoader().load("normal.jpg");
 
 const moon = new THREE.Mesh(
-  new THREE.SphereGeometry(3,32,32),
+  new THREE.SphereGeometry(3, 32, 32),
   new THREE.MeshStandardMaterial({
     map: moonTexture,
-    normalMap: normalTexture
-  })
+    normalMap: normalTexture,
+  }),
 );
 
 scene.add(moon);
@@ -100,8 +107,8 @@ scene.add(moon);
 const moon2 = new THREE.Mesh(
   new THREE.CylinderGeometry(2, 2, 7, 10),
   new THREE.MeshStandardMaterial({
-    map: sebTexture
-  })
+    map: sebTexture,
+  }),
 );
 
 scene.add(moon2);
@@ -120,11 +127,11 @@ seb.position.x = 2;
 
 //Onscroll actions
 
-function moveCamera(){
+function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
 
   moon.rotation.x += 0.02;
-  
+
   moon2.rotation.z += 0.05;
 
   seb.rotation.x += 0.01;
@@ -135,10 +142,19 @@ function moveCamera(){
   camera.position.z = t * -0.011;
 }
 
-document.body.onscroll = moveCamera;
+let hasScrolled = false;
+
+document.body.onscroll = function () {
+  moveCamera();
+
+  if (!hasScrolled) {
+    hasScrolled = true;
+    document.getElementById("scroll").classList.add("hide");
+  }
+};
 
 //Constant animation
-function animate(){
+function animate() {
   requestAnimationFrame(animate);
 
   torus.rotation.x += 0.01;
