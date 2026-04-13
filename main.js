@@ -132,7 +132,7 @@ function moveCamera() {
 
   moon.rotation.x += 0.02;
 
-  moon2.rotation.z += 0.05;
+  moon2.rotation.z += 0.02;
 
   seb.rotation.x += 0.01;
   seb.rotation.y += 0.01;
@@ -149,7 +149,9 @@ document.body.onscroll = function () {
 
   if (!hasScrolled) {
     hasScrolled = true;
-    document.getElementById("scroll").classList.add("hide");
+    setTimeout(() => {
+      document.getElementById("scroll").classList.add("hide");
+    }, 1400);
   }
 };
 
