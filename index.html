@@ -1,234 +1,293 @@
 <!doctype html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="logoSebwayNoBG.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Portfolio de Sébastien Bougouin, apprenti développeur web, fait afin de présenter tous ses projets en un endroit"
-    />
-    <title>SebWay - Sébastien Bougouin</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://unpkg.com/feather-icons"></script>
-  </head>
-  <body>
-    <canvas id="bg"></canvas>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="logoSebwayNoBG.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Portfolio de Sébastien Bougouin, développeur web, fait afin de présenter tous ses projets en un endroit"
+        />
+        <title>SebWay - Sébastien Bougouin</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="https://unpkg.com/feather-icons"></script>
+    </head>
+    <body>
+        <canvas id="bg"></canvas>
 
-    <nav class="navbar">
-      <ul>
-        <li><a href="#projets">Projets</a></li>
-        <li><a href="#formations">Formations</a></li>
-        <li><a href="#experiences">Expériences</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#projets" data-i18n="nav.projets">Projets</a></li>
+                <li>
+                    <a href="#formations" data-i18n="nav.formations"
+                        >Formations</a
+                    >
+                </li>
+                <li>
+                    <a href="#experiences" data-i18n="nav.experiences"
+                        >Expériences</a
+                    >
+                </li>
+                <li>
+                    <a href="#competences" data-i18n="nav.competences"
+                        >Compétences</a
+                    >
+                </li>
+                <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+                <li class="nav-divider" aria-hidden="true">|</li>
+                <li>
+                    <button
+                        type="button"
+                        class="lang-toggle"
+                        data-i18n="lang.toggle"
+                        aria-label="Switch language"
+                    >
+                        EN
+                    </button>
+                </li>
+            </ul>
+        </nav>
 
-    <main>
-      <header>
-        <h1>Sébastien Bougouin</h1>
-        <p>🚀 De l'imagination à la réalité</p>
-        <a href="#contact">
-          <button class="CV">
-            Contact <i class="feather-16" data-feather="arrow-down"></i>
-          </button>
-        </a>
-      </header>
+        <main>
+            <header>
+                <h1 class="animated-text">Sébastien Bougouin</h1>
+                <p class="animated-text" data-i18n="header.subtitle">
+                    🚀 De l'imagination à la réalité
+                </p>
+                <div class="header-actions">
+                    <a href="#contact">
+                        <button class="CV">
+                            <span data-i18n="header.contact">Contact</span>
+                            <i class="feather-16" data-feather="arrow-down"></i>
+                        </button>
+                    </a>
+                    <div class="status-pill">
+                        <span class="status-dot" aria-hidden="true"></span>
+                        <span data-i18n="header.status"
+                            >Ouvert aux opportunités</span
+                        >
+                    </div>
+                </div>
+            </header>
 
-      <div id="scroll">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          enable-background="new 0 0 24 24"
-          height="24px"
-          viewBox="0 0 24 24"
-          width="24px"
-          fill="#000000"
-        >
-          <g>
-            <rect fill="none" height="24" width="24" />
-          </g>
-          <g>
-            <g>
-              <polygon
-                points="18,6.41 16.59,5 12,9.58 7.41,5 6,6.41 12,12.41"
-              />
-              <polygon
-                points="18,13 16.59,11.59 12,16.17 7.41,11.59 6,13 12,19"
-              />
-            </g>
-          </g>
-        </svg>
-      </div>
+            <div id="scroll">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    enable-background="new 0 0 24 24"
+                    height="24px"
+                    viewBox="0 0 24 24"
+                    width="24px"
+                    fill="#000000"
+                >
+                    <g>
+                        <rect fill="none" height="24" width="24" />
+                    </g>
+                    <g>
+                        <g>
+                            <polygon
+                                points="18,6.41 16.59,5 12,9.58 7.41,5 6,6.41 12,12.41"
+                            />
+                            <polygon
+                                points="18,13 16.59,11.59 12,16.17 7.41,11.59 6,13 12,19"
+                            />
+                        </g>
+                    </g>
+                </svg>
+            </div>
 
-      <blockquote>
-        <p>
-          Développeur fullstack de 24 ans <br />
-          Mes mots d'ordre sont l'honnêteté, la créativité et l'innovation.
-        </p>
-      </blockquote>
+            <blockquote>
+                <p data-i18n-html="blockquote.intro">
+                    Développeur fullstack de 24 ans <br />
+                    Mes mots d'ordre sont l'honnêteté, la créativité et
+                    l'innovation.
+                </p>
+            </blockquote>
 
-      <section class="light" id="projets">
-        <h2>👨🏻‍🚀 Projets</h2>
+            <section class="light" id="projets">
+                <h2 data-i18n="section.projets">👨🏻‍🚀 Projets</h2>
 
-        <h1>SixDipHamster</h1>
+                <h1>SixDipHamster</h1>
 
-        <img src="/SixDip-Screenshot.png" alt="SixDip-Screenshot" />
+                <img src="/SixDip-Screenshot.png" alt="SixDip-Screenshot" />
 
-        <p>
-          Projet personnel réalisé dans le cadre du fonctionnement de l'équipe
-          esport amateure "SixDipHamster". Cette nouvelle version du site web
-          permet de montrer les dernières réalisations concernant les hamsters
-          (vidéos, tweets...), les membres mais aussi de montrer un historique
-          de l'équipe sous forme de tableau. Ce projet a été l'occasion pour moi
-          de manipuler le langage CSS plus en profondeur, afin de créer des
-          effets offrant une expérience utilisateur plus agréable.
-        </p>
+                <p data-i18n="project.sixdip.desc">
+                    Projet personnel réalisé dans le cadre du fonctionnement de
+                    l'équipe esport amateure "SixDipHamster". Cette nouvelle
+                    version du site web permet de montrer les dernières
+                    réalisations concernant les hamsters (vidéos, tweets...),
+                    les membres mais aussi de montrer un historique de l'équipe
+                    sous forme de tableau. Ce projet a été l'occasion pour moi
+                    de manipuler le langage CSS plus en profondeur, afin de
+                    créer des effets offrant une expérience utilisateur plus
+                    agréable.
+                </p>
 
-        <a
-          href="https://sixdiphamster.pages.dev/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <p class="project-link">
-            Aller vers le site "SixDipHamster"<img
-              src="/icons8-new-tab.svg"
-              class="feather-24 newTabIcon"
-              alt="New tab icon"
-            />
-          </p>
-        </a>
-      </section>
+                <a
+                    href="https://sixdiphamster.pages.dev/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <p class="project-link">
+                        <span data-i18n="project.sixdip.link">Aller vers le site "SixDipHamster"</span><img
+                            src="/icons8-new-tab.svg"
+                            class="feather-24 newTabIcon"
+                            alt="New tab icon"
+                        />
+                    </p>
+                </a>
+            </section>
 
-      <section class="left">
-        <h2>ESHDEV</h2>
+            <section class="left">
+                <h2>ESHDEV</h2>
 
-        <img src="/ESHDEV-Screenshot.png" alt="ESHDEV-Screenshot" />
+                <img src="/ESHDEV-Screenshot.png" alt="ESHDEV-Screenshot" />
 
-        <p>
-          Refonte du site vitrine de la société ESHDEV lors d'un stage de 10
-          semaines. Cela a été ma première mission dans un cadre professionnel.
-          Ce projet m'a également permis de découvrir et apprendre plusieurs
-          technologies telles que le framework Laravel (PHP), plusieurs
-          librairies construites pour ce framework et Bootstrap.
-        </p>
+                <p data-i18n="project.eshdev.desc">
+                    Refonte du site vitrine de la société ESHDEV lors d'un stage
+                    de 10 semaines. Cela a été ma première mission dans un cadre
+                    professionnel. Ce projet m'a également permis de découvrir
+                    et apprendre plusieurs technologies telles que le framework
+                    Laravel (PHP), plusieurs librairies construites pour ce
+                    framework et Bootstrap.
+                </p>
 
-        <a href="https://esh-dev.fr/" target="_blank" rel="noopener noreferrer">
-          <p class="project-link">
-            Aller vers le site "ESHDEV"<img
-              src="/icons8-new-tab.svg"
-              class="feather-24 newTabIcon"
-              alt="New tab icon"
-            />
-          </p>
-        </a>
-      </section>
+                <a
+                    href="https://esh-dev.fr/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <p class="project-link">
+                        <span data-i18n="project.eshdev.link">Aller vers le site "ESHDEV"</span><img
+                            src="/icons8-new-tab.svg"
+                            class="feather-24 newTabIcon"
+                            alt="New tab icon"
+                        />
+                    </p>
+                </a>
+            </section>
 
-      <blockquote>
-        <p>
-          "I play forever, that's why I'm so patient"
-          <br />- Destin 'JID' Route
-        </p>
-      </blockquote>
+            <blockquote>
+                <p>
+                    "I play forever, that's why I'm so patient"
+                    <br />- Destin 'JID' Route
+                </p>
+            </blockquote>
 
-      <section class="left" id="formations">
-        <h2>🎓 Formations</h2>
+            <section class="left" id="formations">
+                <h2 data-i18n="section.formations">🎓 Formations</h2>
 
-        <h3>DUT Informatique (2019-2021)</h3>
-        <p>
-          Formation généraliste en informatique d'une durée de 2 ans. Durant
-          celle-ci j'ai eu l'occasion de travailler d'effectuer de nombreux
-          projets en équipes sur des technologies diverses. Cette formation a
-          également été l'occasion pour moi d'apprendre l'algorithmie, certains
-          concepts mathématiques, le droit, la gestion mais aussi de rencontrer
-          d'autres personnes partageant une même passion. A la fin de la 2ème
-          année j'ai effectué un stage de 10 semaines au sein de l'entreprise de
-          développement web
-          <a href="https://esh-dev.fr/"><strong>ESHDEV</strong></a> afin
-          d'acquérir une première expérience professionnelle.
-        </p>
+                <h3 data-i18n="formation.dut.title">DUT Informatique (2019-2021)</h3>
+                <p data-i18n-html="formation.dut.desc">
+                    Formation généraliste en informatique d'une durée de 2 ans.
+                    Durant celle-ci j'ai eu l'occasion de travailler d'effectuer
+                    de nombreux projets en équipes sur des technologies
+                    diverses. Cette formation a également été l'occasion pour
+                    moi d'apprendre l'algorithmie, certains concepts
+                    mathématiques, le droit, la gestion mais aussi de rencontrer
+                    d'autres personnes partageant une même passion. A la fin de
+                    la 2ème année j'ai effectué un stage de 10 semaines au sein
+                    de l'entreprise de développement web
+                    <a href="https://esh-dev.fr/"><strong>ESHDEV</strong></a>
+                    afin d'acquérir une première expérience professionnelle.
+                </p>
 
-        <h3>Licence Professionnelle DQL (2021-2022)</h3>
-        <p>
-          Licence spécialisée dans le développement, la qualité logiciel et les
-          méthodes agiles. Celle-ci m'a permis de parfaire mes connaissances
-          concernant les méthodes de développement et de les mettre en oeuvre
-          lors d'un stage de fin d'année de 4 mois au sein de la société
-          <a href="https://www.iologo.io/"><strong>iologo</strong></a>
-          développant une application web à destination des orthophonistes.
-        </p>
+                <h3 data-i18n="formation.lp.title">Licence Professionnelle DQL (2021-2022)</h3>
+                <p data-i18n-html="formation.lp.desc">
+                    Licence spécialisée dans le développement, la qualité
+                    logiciel et les méthodes agiles. Celle-ci m'a permis de
+                    parfaire mes connaissances concernant les méthodes de
+                    développement et de les mettre en oeuvre lors d'un stage de
+                    fin d'année de 4 mois au sein de la société
+                    <a href="https://www.iologo.io/"><strong>iologo</strong></a>
+                    développant une application web à destination des
+                    orthophonistes.
+                </p>
 
-        <h3>Diplôme d'ingénieur AISL - CNAM (2022-2025)</h3>
-        <p>
-          Formation d'ingénieur spécialisé en intégration des systèmes et des
-          logiciels en alternance. Grâce à un rythme de 3 semaines en entreprise
-          et 1 semaine à l'école par mois. Celle-ci m'a permis d'accumuler de
-          l'expérience professionnelle de nombreux domaines dont le
-          développement web.
-        </p>
-      </section>
+                <h3 data-i18n="formation.ing.title">Diplôme d'ingénieur AISL - CNAM (2022-2025)</h3>
+                <p data-i18n="formation.ing.desc">
+                    Formation d'ingénieur spécialisé en intégration des systèmes
+                    et des logiciels en alternance. Grâce à un rythme de 3
+                    semaines en entreprise et 1 semaine à l'école par mois.
+                    Celle-ci m'a permis d'accumuler de l'expérience
+                    professionnelle de nombreux domaines dont le développement
+                    web.
+                </p>
+            </section>
 
-      <section id="experiences">
-        <h2>💼 Expériences professionnelles</h2>
+            <section id="experiences">
+                <h2 data-i18n="section.experiences">💼 Expériences professionnelles</h2>
 
-        <p>
-          Ma première année d'alternance a eu lieu au sein de la société
-          <a href="https://www.iologo.io/"><strong>iologo</strong></a> en tant
-          que développeur frontend. Première expérience passionnante dans le
-          domaine de l'orthophonie en lien direct avec les utilisateurs, qu'ils
-          soient orthophonistes ou patients. <br /><br />
+                <p data-i18n-html="experience.desc">
+                    Ma première année d'alternance a eu lieu au sein de la
+                    société
+                    <a href="https://www.iologo.io/"><strong>iologo</strong></a>
+                    en tant que développeur frontend. Première expérience
+                    passionnante dans le domaine de l'orthophonie en lien direct
+                    avec les utilisateurs, qu'ils soient orthophonistes ou
+                    patients. <br /><br />
 
-          Ensuite j'ai intégré le service web de la
-          <a href="https://laregion.fr/"><strong>Région Occitanie</strong></a>
-          en tant que développeur web. Ce poste m'a permis de découvrir le
-          fonctionnement d'une grande entreprise et de travailler sur des
-          projets d'envergure, utilisés par de nombreux utilisateurs.
-          <br /><br />
+                    Ensuite j'ai intégré le service web de la
+                    <a href="https://laregion.fr/"
+                        ><strong>Région Occitanie</strong></a
+                    >
+                    en tant que développeur web. Ce poste m'a permis de
+                    découvrir le fonctionnement d'une grande entreprise et de
+                    travailler sur des projets d'envergure, utilisés par de
+                    nombreux utilisateurs.
+                    <br /><br />
 
-          Enfin, dans le cadre de ma 3ème année d'alternance, j'ai intégré
-          l'équipe de développement de la startup aéronautique
-          <a href="https://hinfact.com/"><strong>Hinfact</strong></a
-          >. Cette expérience m'a permis de travailler sur des projets innovants
-          et de découvrir un secteur très dynamique. Cela a été l'occasion pour
-          moi de parfaire mes compétences backend ainsi que de collaborer avec
-          de nombreuses personnes dont des UX/UI designers afin de créer une
-          meilleure expérience utilisateur et des Product Owners.
-        </p>
-      </section>
+                    Enfin, dans le cadre de ma 3ème année d'alternance, j'ai
+                    intégré l'équipe de développement de la startup aéronautique
+                    <a href="https://hinfact.com/"><strong>Hinfact</strong></a
+                    >. Cette expérience m'a permis de travailler sur des projets
+                    innovants et de découvrir un secteur très dynamique. Cela a
+                    été l'occasion pour moi de parfaire mes compétences backend
+                    ainsi que de collaborer avec de nombreuses personnes dont
+                    des UX/UI designers afin de créer une meilleure expérience
+                    utilisateur et des Product Owners.
+                </p>
+            </section>
 
-      <blockquote style="margin-bottom: 50px" class="center">
-        <p>Merci de votre attention !</p>
-      </blockquote>
+            <section class="center" id="competences">
+                <h2 data-i18n="section.competences">🛠️ Compétences</h2>
+                <div id="skills" class="skills-grid"></div>
+            </section>
 
-      <section
-        id="contact"
-        class="center"
-        style="margin-bottom: 225px !important; width: 100%"
-      >
-        <h3>Contact</h3>
-        <p>
-          <a href="mailto:sebway377@gmail.com">
-            <i class="feather-24" data-feather="mail"></i>
-            sebway377@gmail.com </a
-          ><br />
-          <a
-            href="https://www.linkedin.com/in/s%C3%A9bastien-bougouin/"
-            target="blank"
-          >
-            <i class="feather-24" data-feather="linkedin"></i>
-            sebastien-bougouin</a
-          >
-        </p>
-        <a href="/CV_Bougouin-Sébastien.pdf" download>
-          <button class="CV">
-            Mon CV <i class="feather-24" data-feather="download"></i>
-          </button>
-        </a>
-      </section>
-    </main>
+            <blockquote id="thanks" style="margin-bottom: 50px" class="center">
+                <p data-i18n="blockquote.thanks">Merci de votre attention !</p>
+            </blockquote>
 
-    <script type="module" src="/main.js"></script>
-    <script>
-      feather.replace();
-    </script>
-  </body>
+            <section
+                id="contact"
+                class="center"
+                style="margin-bottom: 225px !important"
+            >
+                <h3 data-i18n="section.contact">Contact</h3>
+                <p>
+                    <a href="mailto:sebway377@gmail.com">
+                        <i class="feather-24" data-feather="mail"></i>
+                        sebway377@gmail.com </a
+                    ><br />
+                    <a
+                        href="https://www.linkedin.com/in/s%C3%A9bastien-bougouin/"
+                        target="blank"
+                    >
+                        <i class="feather-24" data-feather="linkedin"></i>
+                        sebastien-bougouin</a
+                    >
+                </p>
+                <a href="/CV_Bougouin-Sébastien.pdf" download>
+                    <button class="CV">
+                        <span data-i18n="contact.cv">Mon CV</span>
+                        <i class="feather-24" data-feather="download"></i>
+                    </button>
+                </a>
+            </section>
+        </main>
+
+        <script type="module" src="/main.js"></script>
+        <script>
+            feather.replace();
+        </script>
+    </body>
 </html>
