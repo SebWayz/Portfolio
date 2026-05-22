@@ -161,7 +161,7 @@ seb.position.x = 2;
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
 
-  moon.rotation.x += 0.02;
+  moon.rotation.y += 0.009;
 
   moon2.rotation.z += 0.02;
 
@@ -190,13 +190,13 @@ document.body.onscroll = function () {
 function animate() {
   requestAnimationFrame(animate);
 
-  torus.rotation.x += 0.01;
-  torus.rotation.y += 0.005;
-  torus.rotation.z += 0.01;
+  torus.rotation.x += 0.005;
+  torus.rotation.y += 0.0005;
+  torus.rotation.z += 0.005;
 
-  moon.rotation.y += 0.005;
+  moon.rotation.y += 0.002;
 
-  moon2.rotation.y -= 0.005;
+  moon2.rotation.y -= 0.002;
 
   //controls.update;
 
@@ -282,8 +282,17 @@ const translations = {
   },
 };
 
+let currentLang = localStorage.getItem("lang") === "en" ? "en" : "fr";
+if (currentLang !== "fr") applyTranslations(currentLang);
+
 function applyTranslations(lang) {
   const dict = translations[lang];
+  const CVLink = document.querySelector(".CV-link");
+
+  lang === "fr"
+    ? (CVLink.href = "/CV_Bougouin-Sébastien.pdf")
+    : (CVLink.href = "/CV_Bougouin-Sébastien_english.pdf");
+
   if (!dict) return;
   document.documentElement.lang = lang;
   document.querySelectorAll("[data-i18n]").forEach((el) => {
@@ -295,9 +304,6 @@ function applyTranslations(lang) {
     if (value !== undefined) el.innerHTML = value;
   });
 }
-
-let currentLang = localStorage.getItem("lang") === "en" ? "en" : "fr";
-if (currentLang !== "fr") applyTranslations(currentLang);
 
 function setLanguage(lang) {
   currentLang = lang;
@@ -329,6 +335,10 @@ function splitTextForAnimation(element, startMs) {
   });
   return chars.length;
 }
+
+document.querySelectorAll("nav.navbar li").forEach((li, i) => {
+  li.style.setProperty("--i", i);
+});
 
 const headerH1 = document.querySelector("header h1.animated-text");
 const headerP = document.querySelector("header p.animated-text");
