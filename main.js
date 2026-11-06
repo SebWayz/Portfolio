@@ -283,7 +283,7 @@ const translations = {
 };
 
 let currentLang = localStorage.getItem("lang") === "en" ? "en" : "fr";
-if (currentLang !== "fr") applyTranslations(currentLang);
+applyTranslations(currentLang);
 
 function applyTranslations(lang) {
   const dict = translations[lang];
