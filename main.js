@@ -254,7 +254,7 @@ const translations = {
     "header.contact": "Contact",
     "header.status": "Open to opportunities",
     "blockquote.intro":
-      "Fullstack developer, 24 years old <br /> My guiding principles are honesty, creativity and innovation.",
+      "Fullstack developer, 25 years old <br /> My guiding principles are honesty, creativity and innovation.",
     "section.projets": "👨🏻‍🚀 Projects",
     "project.sixdip.desc":
       'Personal project built around the operation of the amateur esports team "SixDipHamster". This new version of the website showcases the latest hamster-related content (videos, tweets...), team members, and a history of the team as a table. This project was an opportunity for me to dig deeper into CSS to create effects that deliver a more pleasant user experience.',

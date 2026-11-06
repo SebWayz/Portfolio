@@ -481,10 +481,10 @@ nav.navbar a:hover {
     }
 
     nav.navbar {
-        width: 100%;
+        width: 90%;
         height: auto;
-        padding: 1rem;
-        border-radius: 0 0 20px 20px;
+        padding: 0 0.4rem 0.2rem 0;
+        border-radius: 0 0 0 20px;
         align-items: center;
     }
 
