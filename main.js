@@ -217,7 +217,7 @@ const translations = {
     "header.contact": "Contact",
     "header.status": "Ouvert aux opportunités",
     "blockquote.intro":
-      "Développeur fullstack de 24 ans <br /> Mes mots d'ordre sont l'honnêteté, la créativité et l'innovation.",
+      "Développeur fullstack de 25 ans <br /> Mes mots d'ordre sont l'honnêteté, la créativité et l'innovation.",
     "section.projets": "👨🏻‍🚀 Projets",
     "project.sixdip.desc":
       "Projet personnel réalisé dans le cadre du fonctionnement de l'équipe esport amateure \"SixDipHamster\". Cette nouvelle version du site web permet de montrer les dernières réalisations concernant les hamsters (vidéos, tweets...), les membres mais aussi de montrer un historique de l'équipe sous forme de tableau. Ce projet a été l'occasion pour moi de manipuler le langage CSS plus en profondeur, afin de créer des effets offrant une expérience utilisateur plus agréable.",
